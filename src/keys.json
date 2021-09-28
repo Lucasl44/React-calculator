@@ -1,0 +1,2 @@
+[
+    {"class": "clear", "value": "AC"}, {"class": "num", "value": 9}, {"class": "num", "value": 8}, {"class": "num", "value": 7}, {"class": "equation", "value": "*"}, {"class": "num", "value": 6}, {"class": "num", "value": 5}, {"class": "num", "value": 4}, {"class": "equation", "value": "/"}, {"class": "num", "value": 3}, {"class": "num","value": 2}, {"class": "num", "value": 1}, {"class": "equation", "value": "+"}, {"class": "equation", "value": "-"}, {"class": "num", "value": 0}, {"class": "equation", "value": "."}, {"class": "equals", "value": "="}]

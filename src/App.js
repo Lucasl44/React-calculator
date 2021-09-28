@@ -1,25 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from "react";
+import buttons from "./keys.json";
+const math = require("mathjs"); 
 
-function App() {
+const App = () =>  {
+  const [total, setTotal] = useState([""])
+  const [performed, setPerformed] = useState(false);
+  const handleClick = (value) => {
+    if (performed == true) {
+      setPerformed(false)
+      setTotal("");
+      console.log("yep", total, performed);
+    }
+    if (value === "=") {
+      let equation = total;
+      try {
+        equation = math.evaluate(equation.join(""));
+        setTotal([equation]);
+        setPerformed(true);
+      } catch {
+        setTotal("Error press AC")
+      }
+    } else if (value === "AC") {
+      setTotal("");
+    } else {
+      setTotal([...total, value])
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="top">
+      <div className="main">
+        <h1 className="total">{total}</h1>
+        {buttons.map(item => {
+          return <button className={item.class} onClick={()=> handleClick(item.value)}>{item.value}</button>
+        })}
+      </div>
     </div>
-  );
+  
+  )
 }
-
 export default App;

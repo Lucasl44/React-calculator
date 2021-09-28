@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+body{
+  background-color: blue;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.top {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  margin-top: 10%;
+}
+.main {
+  width: 50%;
+  border: 4px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: lightgray;
+
+
+}
+.total {
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+  height: 50px;
+  background-color: black;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color:gray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.num{
+  width: 25%;
+  height: 60px;
+  background-color: orange;
+  font-weight: large;
+  border: 2px solid black;
+}
+.equation{
+  width: 25%;
+  height: 60px;
+  background-color: lightgrey;
+  font-weight: large;
+  border: 2px solid black;
+}
+.clear{
+  width: 25%;
+  height: 60px;
+  background-color: lightgray;
+  font-weight: large;
+  border: 2px solid black;
+}
+.equals{
+  flex: 1;
+  height: 60px;
+  background-color: lightgrey;
+  font-weight: large;
+  border: 2px solid black;
 }
